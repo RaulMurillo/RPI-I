@@ -9,3 +9,26 @@ This framework integrates a Gatt Server with a Wi-Fi provisioning application. T
 The structure of the Gatt Server, its services and characteristics, are depicted in figure below:
 
 ![GATT_server img](./imgs/GATT_server.png)
+
+
+## How to use
+
+### Configure the project
+
+```
+idf.py menuconfig
+```
+* Enter in the "Partition Table" menu.
+* Select "Custom partiton table CSV" under "Partition Table" option.
+* Set the default file name "partitions.csv" in the "Custom partition CSV file" option.
+* Save and quit.
+
+### Build and Flash
+
+Build the project and flash it to the board, then run monitor tool to view serial output:
+
+```
+idf.py -p PORT flash monitor
+```
+
+(To exit the serial monitor, type ``Ctrl-]``.)
